@@ -8,12 +8,13 @@ console.log(response("5", "6"));
 console.log(response(a, b));
 
 //JavaScript Types ...
+
 //primitives:
 //Boolean : typeof instance === "boolean"
 //Number : typeof instance === "number"
 //String : typeof instance === "string"
 //bigInt : typeof instance === "bigint"
-//symbol : typeof instance === "symbol"
+//symbol : typeof instance === "symbol"// in some rogramming languages these are atoms
 //undefined : typeof instance === "defined"
 
 //structural types:
