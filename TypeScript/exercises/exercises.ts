@@ -6,4 +6,4 @@
 function greet1(name: string, age: number): string {
   return `Hello, my name is ${name} and I am ${age} years old`;
 }
-console.log(greet("Alice", 25));
+console.log(greet1("Alice", 25));
