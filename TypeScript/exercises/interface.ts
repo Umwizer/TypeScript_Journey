@@ -5,7 +5,7 @@ interface User {
   userName: string;
   email: string;
   isAdmin: boolean;
-  permissio;
+  permissions: ["read", "write"];
 }
 function printUserInfo1(user: User) {
   console.log(`Username : ${user.userName}`);
