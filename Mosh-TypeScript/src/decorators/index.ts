@@ -1,5 +1,9 @@
+type ComponentOptions = {
+  selector: string;
+};
+
 //Decorator factory
-function Component(value: number) {
+function Component(value: ComponentOptions) {
   return (constructor: Function) => {
     console.log("Component decorator called ");
     constructor.prototype.options = value;
@@ -9,5 +13,5 @@ function Component(value: number) {
     };
   };
 }
-@Component(1)
+@Component({ selector: "my-profile" })
 class ProfileComponent {}
