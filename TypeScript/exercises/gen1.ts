@@ -1,8 +1,8 @@
-function ruthOne<T>(arr: Array<T>): T {
-  return arr[0];
+//with function
+function reneOne<T>(arr: T): T {
+  return arr;
 }
-function reneOne<T>(arr: T[]): T {
-  return arr[arr.length - 1];
-}
-console.log(ruthOne(["a", "b", "c"]));
+//console.log(ruthOne(["a", "b", "c"]));
 console.log(reneOne([1, 2, 3]));
+console.log(reneOne({ age: 20 }));
+console.log(reneOne(true));
