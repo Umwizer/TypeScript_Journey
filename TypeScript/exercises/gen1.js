@@ -1,5 +1,8 @@
-function identity(value) {
-    return value;
+function ruthOne(arr) {
+    return arr[0];
 }
-identity(42);
-identity("hello");
+function reneOne(arr) {
+    return arr[arr.length - 1];
+}
+console.log(ruthOne(["a", "b", "c"]));
+console.log(reneOne([1, 2, 3]));
