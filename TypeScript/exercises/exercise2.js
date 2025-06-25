@@ -21,6 +21,7 @@ Exercise:
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.persons = void 0;
 exports.logPerson = logPerson;
+//difference btn type aliases and interface
 exports.persons = [
     {
         name: "Max Mustermann",
@@ -44,7 +45,7 @@ exports.persons = [
     },
 ];
 function logPerson(user) {
-    console.log(" - ".concat(user.name, ", ").concat(user.age));
+    console.log(` - ${user.name}, ${user.age}`);
 }
 exports.persons.forEach(logPerson);
 // In case you are stuck:

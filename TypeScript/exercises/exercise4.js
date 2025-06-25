@@ -38,14 +38,14 @@ function isUser(person) {
     return person.type === "user";
 }
 function logPerson(person) {
-    var additionalInformation = "";
+    let additionalInformation = "";
     if (isAdmin(person)) {
         additionalInformation = person.role;
     }
     if (isUser(person)) {
         additionalInformation = person.occupation;
     }
-    console.log(" - ".concat(person.name, ", ").concat(person.age, ", ").concat(additionalInformation));
+    console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
 console.log("Admins:");
 exports.persons.filter(isAdmin).forEach(logPerson);

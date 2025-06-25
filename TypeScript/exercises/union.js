@@ -1,3 +1,4 @@
+"use strict";
 function handleResponse(response) {
     if (response.success === true) {
         console.log(response.data);

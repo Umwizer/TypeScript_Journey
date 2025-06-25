@@ -63,28 +63,24 @@ exports.persons = [
         role: "Administrator",
     },
 ];
-var isAdmin = function (person) {
-    return person.type === "admin";
-};
+const isAdmin = (person) => person.type === "admin";
 exports.isAdmin = isAdmin;
-var isUser = function (person) {
-    return person.type === "user";
-};
+const isUser = (person) => person.type === "user";
 exports.isUser = isUser;
 function logPerson(person) {
-    var additionalInformation = "";
+    let additionalInformation = "";
     if ((0, exports.isAdmin)(person)) {
         additionalInformation = person.role;
     }
     if ((0, exports.isUser)(person)) {
         additionalInformation = person.occupation;
     }
-    console.log(" - ".concat(person.name, ", ").concat(person.age, ", ").concat(additionalInformation));
+    console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
 function filterUsers(persons, criteria) {
-    return persons.filter(exports.isUser).filter(function (user) {
-        var criteriaKeys = Object.keys(criteria);
-        return criteriaKeys.every(function (fieldName) {
+    return persons.filter(exports.isUser).filter((user) => {
+        const criteriaKeys = Object.keys(criteria);
+        return criteriaKeys.every((fieldName) => {
             return user[fieldName] === criteria[fieldName];
         });
     });
